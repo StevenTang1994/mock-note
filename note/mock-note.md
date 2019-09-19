@@ -121,6 +121,7 @@ $.ajax({
 响应时也可以是使用 `function`, 如:
 
 ```javascript {.line-numbers}
+const Mock = require('mockjs');
 Mock.mock(/\.json/, 'post', function(options) {
     return options.type
 })
@@ -155,6 +156,7 @@ $.ajax({
     console.log(res);
 })
 
+const Mock = require('mockjs');
 Mock.mock(/\.json/, 'post', function(options) {
     console.log(options);
     // 打印出 {url: "http://test.com", type: "POST", body: "account=888&pwd=abc123"}
